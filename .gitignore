@@ -1,6 +1,7 @@
 build/
 dist/
 node_modules/
+node_modules_2/
 test/integration/screenshots-current/
 _site/
 .DS_Store
