@@ -10,6 +10,7 @@
   "private": true,
   "scripts": {
     "start": "node ./configuration/server.js",
+    "heroku-postbuild": "webpack --config configuration/webpack.prod.js",
     "start2": "webpack-dev-server --config configuration/webpack.dev.js",
     "start:prod": "webpack-dev-server --config configuration/webpack.prod.js",
     "start:poly": "polymer serve",
