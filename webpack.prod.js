@@ -31,7 +31,7 @@ module.exports = merge(common, {
     ),
     new CopyWebpackPlugin([
       {
-        from: 'configuration/Web.config',
+        from: 'Web.config',
         to: '.',
         toType: 'dir'
       }
