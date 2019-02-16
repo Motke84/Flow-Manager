@@ -22,8 +22,6 @@ jobs:
           path: ~/repo/Frontend/
       # Download and cache dependencies
 
-      - run:
-        command: ls /home/circleci/Flow-Manager/Frontend/
 
       - restore_cache:
           keys:
