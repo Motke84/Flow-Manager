@@ -24,7 +24,7 @@ jobs:
 
       - run:
           name: move dir
-          command: ls /home/circleci/Flow-Manager/
+          command: sudo ls /home/circleci/Flow-Manager/
 
       - restore_cache:
           keys:
