@@ -19,9 +19,12 @@ jobs:
 
     steps:
       - checkout:
-          path: ~/Flow-Manager/Frontend/
+          path: ~/repo/Frontend/
       # Download and cache dependencies
 
+    - run:
+      name: move dir
+      command: ls /home/circleci/Flow-Manager/
 
       - restore_cache:
           keys:
@@ -29,11 +32,13 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run: npm install
+      - run: 
+      name: install
+      command: npm install
 
       - save_cache:
           paths:
-            - ~/Flow-Manager/Frontend/node_modules
+            - ~/repo/Frontend/node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
         
       # run tests!
