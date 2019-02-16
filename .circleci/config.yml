@@ -19,7 +19,7 @@ jobs:
 
     steps:
       - checkout:
-          path: ~/repo/Frontend/
+          path: ~/Flow-Manager/Frontend/
       # Download and cache dependencies
 
 
@@ -33,7 +33,7 @@ jobs:
 
       - save_cache:
           paths:
-            - ~/repo/Frontend/node_modules
+            - ~/Flow-Manager/Frontend/node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
         
       # run tests!
