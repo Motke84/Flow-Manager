@@ -15,16 +15,12 @@ jobs:
       # documented at https://circleci.com/docs/2.0/circleci-images/
       - image: circleci/mongo:3.4-jessie
 
-    working_directory: ~/repo/Frontend/
+    working_directory: ~/repo
 
     steps:
-      - checkout:
-          path: ~/repo/Frontend/
+      - checkout
       # Download and cache dependencies
 
-      - run:
-          name: move dir
-          command: sudo ls /home/circleci/Flow-Manager/
 
       - restore_cache:
           keys:
@@ -38,7 +34,7 @@ jobs:
 
       - save_cache:
           paths:
-            - ~/repo/Frontend/node_modules
+            - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
         
       # run tests!
