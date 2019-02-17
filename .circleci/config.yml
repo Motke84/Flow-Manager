@@ -22,20 +22,17 @@ jobs:
       # Download and cache dependencies
 
 
-     # - run: 
-      #    name: move dir
-       #   command: sudo ls -l ~/repo/Frontend
+      - run: 
+          name: move dir
+          command: sudo ls -l ~/repo/Frontend
 
 
       - restore_cache:
         
           keys:
-            paths:
-              - ~/repo/Frontend/node_modules
-            keys: 
-            - v1-dependencies-{{ checksum "package.json" }}
-            # fallback to using the latest cache if no exact match is found         
-            - v1-dependencies-
+          - v1-dependencies-{{ checksum "package.json" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
 
 
 
