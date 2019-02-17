@@ -65,7 +65,7 @@ class TopDayView extends connect(store)(PageViewElement) {
           
               <div class="row">
                 <div class="column">
-                  <inner-graph width="${5000}" height="${1000}" @onSaveReady="${this._saveReady}" @onShapeSelected="${this._onShapeSelected}"
+                  <inner-graph width="${3500}" height="${800}" @onSaveReady="${this._saveReady}" @onShapeSelected="${this._onShapeSelected}"
                     .statusColors="${this.getStatusColors()}">
                   </inner-graph>
                 </div>

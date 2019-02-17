@@ -23,13 +23,8 @@ export const getAllFlowItems = (date) => (dispatch) => {
     let flowItems;
     //https://moti-m-weather-api.herokuapp.com/getFlow
     axios({
-        url: `${process.env.SERVER_PATH}/GetFlow/${date}`,
+        url: `${process.env.SERVER_PATH}/GetFlow/${'apple-pie'}`,
         method: 'GET',
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded'
-            // "Content-Type": "application/json",
-            // "Accept": "application/json"
-        },
         compress: false
     }).then(function (response) {
 
@@ -82,14 +77,7 @@ export const saveFlowItems = (flowItems) => (dispatch) => {
     axios({
         url: `${process.env.SERVER_PATH}/SaveFlow`,
         method: 'POST',
-        data: flowItems,
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded'
-            // "Content-Type": "application/json",
-            // "Accept": "application/json"
-        },
-        body: flowItems,
-        compress: false
+        data: { flowItems: flowItems, flowName :'apple-pie'},
     }).then(function (response) {
 
         dispatch(showSnackbar("Success", false));
