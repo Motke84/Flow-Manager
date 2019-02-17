@@ -34,7 +34,9 @@ jobs:
 
       - run: 
           name: install
-          command: sudo ls -l ~/repo/Frontend npm install
+          command: |
+            sudo ls -l ~/repo/Frontend 
+            npm install
 
       - save_cache:
           paths:
