@@ -23,8 +23,8 @@ jobs:
 
 
       - run: 
-        name: move dir
-        command: sudo ls -l ~/repo/Frontend
+          name: move dir
+          command: sudo ls -l ~/repo/Frontend
 
 
       - restore_cache:
