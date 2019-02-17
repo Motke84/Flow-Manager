@@ -32,9 +32,10 @@ jobs:
           keys:
             paths:
               - ~/repo/Frontend/node_modules
-            keys: - v1-dependencies-{{ checksum "package.json" }}
-          # fallback to using the latest cache if no exact match is found
-                  - v1-dependencies-
+            keys: 
+            - v1-dependencies-{{ checksum "package.json" }}
+            # fallback to using the latest cache if no exact match is found         
+            - v1-dependencies-
 
 
 
